@@ -4,6 +4,7 @@ pipeline {
     stage('Buzz Buzz') {
       steps {
         echo 'Bees Buzz'
+        sh 'echo "I am a ${BUZZ_NAME}"'
       }
     }
 
