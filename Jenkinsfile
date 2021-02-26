@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Buzz Buzz') {
       parallel {
-        stage('Buzz Buzz') {
+        stage('Test A') {
           steps {
             echo 'Bees Buzz'
             sh 'echo "I am a ${BUZZ_NAME}"'
