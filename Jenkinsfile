@@ -13,6 +13,7 @@ pipeline {
           steps {
             echo 'Bees Buzz'
             sh 'echo "I am a ${BUZZ_NAME}"'
+            stash(name: 'Buzz TestA', includes: 'target/**')
           }
         }
 
