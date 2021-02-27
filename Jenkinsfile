@@ -4,6 +4,12 @@ pipeline {
     stage('Buzz Buzz') {
       parallel {
         stage('Test A') {
+          agent {
+            node {
+              label 'Java8'
+            }
+
+          }
           steps {
             echo 'Bees Buzz'
             sh 'echo "I am a ${BUZZ_NAME}"'
