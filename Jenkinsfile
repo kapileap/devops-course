@@ -2,12 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Test A') {
-      agent {
-        node {
-          label 'Java8'
-        }
-
-      }
+      agent any
       steps {
         echo 'Bees Buzz'
         stash(name: 'Buzz TestA', includes: 'target/**')
