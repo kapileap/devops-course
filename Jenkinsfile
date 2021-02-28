@@ -5,7 +5,6 @@ pipeline {
       agent any
       steps {
         echo 'Bees Buzz'
-        stash(name: 'Buzz TestA', includes: 'target/**')
       }
     }
 
