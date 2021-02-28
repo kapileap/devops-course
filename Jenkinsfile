@@ -16,6 +16,12 @@ pipeline {
       }
     }
 
+    stage('Confirm Deploy to Staging') {
+      steps {
+        input(message: 'Do you want to deploy to staging?', ok: 'lets do it!')
+      }
+    }
+
   }
   environment {
     BUZZ_NAME = 'Worker Bee'
