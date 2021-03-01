@@ -16,6 +16,9 @@ pipeline {
     }
 
     stage('Confirm Deploy to Staging') {
+      when {
+        branch 'master'
+      }
       steps {
         input(message: 'Do you want to deploy to staging?', ok: 'lets do it!')
       }
